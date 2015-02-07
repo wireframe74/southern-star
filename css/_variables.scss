@@ -1,0 +1,37 @@
+$primary-color: #e11c22;
+$secondary-color: #119589;
+$tertiary-color: rgb(45, 55, 105);
+$grey: #eee;
+
+
+
+%body-copy {
+font-family: arial, sans-serif;
+font-weight: normal;
+}
+
+
+
+%primary-font {
+font-family: 'GothamHTF-Black', arial, sans-serif;
+font-weight: normal;
+}
+
+%bold-font {
+font-family: 'Arial-BoldMT', arial, sans-serif;
+font-weight: normal;
+}
+
+%secondary-font {
+font-family: 'GothamHTF-Bold', arial, sans-serif;
+font-weight: normal;
+}
+
+
+
+%but-hover { 
+	background: darken($tertiary-color, 30%);
+}
+
+
+
