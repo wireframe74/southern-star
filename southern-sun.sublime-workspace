@@ -99,7 +99,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 48943,
+				"buffer_size": 49760,
 				"line_ending": "Windows"
 			}
 		},
@@ -112,42 +112,18 @@
 			}
 		},
 		{
-			"file": "bottom-html.html",
+			"file": "css/_variables.scss",
 			"settings":
 			{
-				"buffer_size": 6762,
-				"line_ending": "Windows"
+				"buffer_size": 506,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/_customise.scss",
 			"settings":
 			{
-				"buffer_size": 11387,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html class=\"no-js\">\n<head>\n	<%@include file=\"components/header.html\"%>\n	<% if (WebSite.isThisPageInList(request, \"basket\")) { %><script>function generateBasketProgressBar(per){$(document).ready(function(){basketBarCreate(per)})}</script><% }%>\n</head>\n<%\n//Strings\nString stockEnquiryString = \"For all stock enquiries relating to this product please enter your email address below:\";\nString categoryTitleText = \"\";\nwebsite.setLinkedProductsText(\"Related products\");\nwebsite.setZoomImageSettings(\"zoom-width:100%; zoom-height:420px; zoom-position:#magicZoomPos; opacity-reverse:true; hint-position:tr; show-title:false; buttons-position:top right; zoom-distance:0;\");\nwebsite.setFeaturedItemsText(\"\");\nwebsite.setInStockString(\"in stock\");\nwebsite.setOutOfStockString(\"<span>Out of stock</span>\");\n\n//Images\nwebsite.setStockThumbSize(160);\nwebsite.setGroupThumbSize(160);\nwebsite.setProductPageImageSize(500);\nwebsite.setLinkedProductsStockThumbSize(140);\nwebsite.setAdditionalImageSize(75);\nwebsite.setAlsoBoughtStockThumbSize(128);\nwebsite.setRecentlyViewedStockThumbSize(128);\nwebsite.setTopSellingItemsImageSize(40);\nwebsite.setBasketThumbSize(40);\n\n//Show Amounts\nwebsite.setNumRecentlyViewedItems(7);\nwebsite.setNumberOfLinkedProducts(6);\nwebsite.setTopSellingItemsNumToShow(6);\nwebsite.setNumGroupItemsAcross(4);\nwebsite.setNumStockItemsAcross(4);\n\n//Booleans\nwebsite.setUseShortNamesOnProductTabs(true);\nwebsite.setAllowAddToBasketFromIndexPage(true);\nwebsite.setVersion2(true);\nwebsite.setUseQuickPayCheckout(false);\nwebsite.setUseSelectablePageNumbers(true);\nwebsite.setShowTellAFriend(false);\nwebsite.setAllowFullTextHTMLMarkup(true);\nwebsite.setUseMediaService(false);\nwebsite.setUseImageService(false);\nwebsite.setShowCategoriesOnHomepage(false);\nwebsite.setIncludeOneLevelOfSubCategoryOnly(true);\nwebsite.setUsePNGindicatorImages(true);\nwebsite.setIncludeBasketQtyWhenDisplayingOutOfStockMsg(false);\nwebsite.setShowQuantityAvailable(true);\nwebsite.setUseSecureRegistration(false);\n\n//Refine By\nwebsite.setUsingRefinementSearch(false);\nif(website.isUsingRefinementSearch()){\n	website.setShowCategoriesInIndex(false);\n	website.setShowRecursedArticlesInIndex(true);\n	website.setNavigationRefinementAllowMultiChoicesWithinHeader(true);\n}else{\n	website.setShowCategoriesInIndex(true);\n	website.setShowRecursedArticlesInIndex(false);\n	website.setNavigationRefinementAllowMultiChoicesWithinHeader(false);\n}\n\n//Payment\n//website.addPaymentProvider(\"PayPal\",\"example@example.com\",null,null);\n\nString thisPgName = \"\"+request.getAttribute(\"origPageName\");\nif (thisPgName != null) {\n	int idxpgnamedot = thisPgName.indexOf(\".\");\n	if (idxpgnamedot > -1) thisPgName = thisPgName.substring(0,idxpgnamedot);\n}\nif (thisPgName == null || thisPgName.equals(\"null\")) thisPgName = \"unclassifiedpage\";\n%>\n\n<body class=\"<% if (userSession.isHomePage()) { %>index<% }else{%>page-<%=thisPgName%> pageTemp-<%=userSession.getCurrentTemplatePage()%><%}%>\">\n\n\n\n\n\n<a id=\"skip-link\" href=\"#nav\">Skip to navigation</a>\n\n	<div id=\"header\">\n		<%@include file=\"/header.html\"%>\n	</div>\n\n	<div id=\"wrapper\">\n\n		<% if (userSession.isHomePage()) { %> \n	\n	\n\n	<section class=\"homepage-area\">\n		\n		<div class=\"header-wrap-bg module-wrap\">\n			\n			<ul class=\"store-menu\">\n				<li class=\"cta-1\"><a href=\"/brands-disney-by-britto.irc\"></a></li>\n				<li class=\"cta-2\"><a href=\"/home-and-garden-for-the-home-kitchen.irc\"></a></li>\n				<li class=\"cta-3\"><a href=\"/home-and-garden-for-the-home-wall-art-mirrors-and-tins-signs.irc\"></a></li> \n				<li class=\"cta-4\"><a href=\"/lamps-art-deco-cold-cast-bronze-lamps.irc\"></a></li>\n			</ul>\n\n		</div>\n\n\n		<div class=\"module-wrap white-module\">\n			\n				<h2>Affordable Gifts &amp; Decor</h2>\n\n				<p>La Meva Casa - Your Home for Gifts and Collectables (and everything in between!). </p>\n\n				<p><a href=\"about-us.irs\" class=\"btn\">More</a></p>\n\n		</div>\n\n\n	\n\n\n\n	<div class=\"container \">\n		\n\n	\n\n\n\n\n\n\n\n\n	</div><!-- .container -->\n\n		</section>\n\n\n		<% }%> <!-- .END HOME PAGE CONDITIONAL -->\n\n	<% if (!userSession.isHomePage()) { %>\n	 <div class=\"main-wrap\">\n	<% }%> <!-- .END HOME PAGE CONDITIONAL -->\n\n		<div class=\"container <% if (userSession.isHomePage()) { %> homepage-area  module-wrap <% }%> \">\n\n				<% if (userSession.isHomePage()) { %> \n				<h2>Long Weekend Specials</h2>\n\n					<ul class=\"sale\">\n					<li class=\"widget-1\"><a href=\"/brands-cinnamon-placemats-coasters.irc\">Placemats</a></li>\n					<li class=\"widget-2\"><a href=\"/brands-penny-scallan.irc\">Penny Scallan </a></li>\n					<li class=\"widget-3\"><a href=\"/lamps-art-deco-cold-cast-bronze-lamps.irc\">Art Deco Lamps</a></li>\n					<li class=\"widget-4 last\"><a href=\"/home-and-garden-for-the-garden-garden-wall-decor.irc\">Garden Décor</a></li>	\n					<li class=\"widget-5\"><a href=\"/sale.irc\">On Sale</a></li>\n				</ul>\n\n				<% }%> <!-- .END HOME PAGE CONDITIONAL -->\n\n\n			\n\n\n			<div class=\"article <% if (WebSite.isThisPageInList(request, \"paysecure,detail,checkoutv2\")){  %>full<% }%>\">\n				<%@include file=\"components/componentcontroller.jsp\"%> \n			</div>\n\n			<% if (!WebSite.isThisPageInList(request, \"paysecure,detail,checkoutv2\") && !userSession.isHomePage()) { %>\n				<div class=\"aside\">\n					<jsp:include page=\"/template/components/leftmargin.jsp\" />\n				</div>\n			<% }%>\n\n		</div>\n\n\n			<% if (userSession.isHomePage()) { %> \n\n			<div class=\"module-wrap white-module\">\n\n					<h2>Brands</h2>\n					<p><img src=\"<%=website.getImagePath(\"brands.gif\")%>\" alt=\"Brands\" /></p>\n					<p><a href=\"/brands.irc\" class=\"btn\">More</a></p>\n\n		     </div>\n\n\n\n\n		<% }%> <!-- .END HOME PAGE CONDITIONAL -->\n		\n	<% if (!userSession.isHomePage()) { %>\n	 </div>\n	<% }%> <!-- .END MAIN WRAP -->	\n\n\n\n	<div class=\"cleardiv\">&nbsp;</div>\n\n	</div>\n\n	<% if (!WebSite.isThisPageInList(request, \"checkoutv2\")) { %>\n	\n				<div class=\"module-wrap white-module color-2\">\n					<h2>Join Mailing List</h2>\n					<p>Join our Mailing List to receive exclusive offers & discounts.</p>\n					<%@include file=\"/newsletter.html\"%>\n				</div>\n\n\n\n		<div id=\"footer\">\n			<div class=\"wrap960 footer-top\">\n				<%@include file=\"/footer.html\"%>\n\n			</div>\n\n\n\n				\n\n				<div class=\"footer-secondary\">\n\n							<div class=\"wrap960\">\n\n												<div class=\"copyright\">\n\n														<%@include file=\"components/footer.jsp\"%>\n\n														<div class=\"small\">\n\n										\n	\n	\n	\n\n\n\n															&copy; Intelligent Retail 2014 - <script type=\"text/javascript\">document.write(new Date().getFullYear());</script> - All rights reserved. By <a href=\"http://www.intelligentretail.com.au\" target=\"_blank\">Intelligent Retail ePos software &amp; eCommerce for retailers</a>\n														</div>\n												</div>\n\n							</div>\n\n\n					\n				</div>\n\n\n\n\n\n\n\n		</div>\n\n		<div class=\"wrap960\">\n			<div id=\"nav\">\n				<%@include file=\"/topnav.html\"%>\n				<%@include file=\"/salesmessages.html\"%>\n			</div>\n		</div>\n		\n	<% } %>\n\n	<%out.write(userSession.getTrackingController().getScript(request, userSession.getWebController().isThankYouPage()));%>\n\n	<%@include file=\"/analytics.html\"%>\n\n	<%@include file=\"/javascript.html\"%>\n\n</body>\n</html>\n",
-			"settings":
-			{
-				"buffer_size": 7063,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/apache/webapps/ROOT/template/template.jsp",
-			"settings":
-			{
-				"buffer_size": 7058,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/_variables.scss",
-			"settings":
-			{
-				"buffer_size": 506,
+				"buffer_size": 11879,
 				"line_ending": "Unix"
 			}
 		}
@@ -228,12 +204,14 @@
 	],
 	"file_history":
 	[
+		"/C/wamp/www/southern-sun/css/_customise.scss",
+		"/C/apache/webapps/ROOT/template/template.jsp",
+		"/C/wamp/www/southern-sun/bottom-html.html",
 		"/C/wamp/www/southern-sun/index.html",
 		"/C/wamp/www/southern-sun/js/custom.js",
 		"/C/wamp/www/nzawep/wp-content/themes/aawep/templates/sign-up.php",
 		"/C/wamp/www/wei/wp-content/themes/aawep/templates/sign-up.php",
 		"/C/wamp/www/wpa/wp-content/themes/aawep/templates/sign-up.php",
-		"/C/wamp/www/southern-sun/css/_customise.scss",
 		"/C/wamp/www/southern-sun/css/_custom.scss",
 		"/C/wamp/www/southern-sun/sftp-config.json",
 		"/C/wamp/www/southern-sun/css/_variables.scss",
@@ -276,7 +254,6 @@
 		"/C/wamp/www/ebay-template/final/dist/tabs.html",
 		"/C/wamp/www/ff/preview.html",
 		"/C/apache/webapps/ROOT/template/_variables.scss",
-		"/C/apache/webapps/ROOT/template/template.jsp",
 		"/C/apache/webapps/ROOT/template/_home.scss",
 		"/C/wamp/www/ebay-template/final/dist/css/_base.scss",
 		"/C/wamp/www/ebay-template/final/dist/css/_variables.scss",
@@ -354,8 +331,7 @@
 		"/C/wamp/www/epv/wp-content/themes/epv/full-width.php",
 		"/C/wamp/www/epv/wp-content/themes/epv/_variables.scss",
 		"/C/wamp/www/epv/wp-content/themes/epv/footer.php",
-		"/C/wamp/www/epv/wp-content/themes/epv/home-slider.php",
-		"/C/wamp/www/epv/wp-content/themes/epv/home-slider-old.php"
+		"/C/wamp/www/epv/wp-content/themes/epv/home-slider.php"
 	],
 	"find":
 	{
@@ -551,7 +527,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -560,15 +536,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 48943,
+						"buffer_size": 49760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1489,
-								1489
+								6591,
+								6591
 							]
 						],
 						"settings":
@@ -581,10 +557,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3127.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -600,8 +576,8 @@
 						"selection":
 						[
 							[
-								1474,
-								1474
+								990,
+								990
 							]
 						],
 						"settings":
@@ -614,142 +590,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 707.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "bottom-html.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6762,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6588,
-								6442
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4124.0,
+						"translation.y": 140.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "css/_customise.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11387,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11054,
-								11054
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/sass-textmate-bundle-master/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 12937.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7063,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3918,
-								3917
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2484.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/apache/webapps/ROOT/template/template.jsp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7058,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4285,
-								4285
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2536.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 2,
 					"file": "css/_variables.scss",
 					"semi_transient": false,
 					"settings":
@@ -776,7 +624,39 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/_customise.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/sass-textmate-bundle-master/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 864.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1043,7 +923,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 126.0,
+	"side_bar_width": 292.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
