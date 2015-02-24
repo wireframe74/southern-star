@@ -7,6 +7,7 @@
 }
 
 
+
 @font-face {
   font-family: 'GothamHTF-Bold';
   src: url('../fonts/gotham/GothamHTF-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/gotham/GothamHTF-Bold.otf')  format('opentype'),
@@ -24,17 +25,19 @@
 }
 
 
-.or {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background: url(../images/or.png) center left no-repeat;
-	z-index:1000;
-	display:block;
-	left:-24px;
-	top:0;
 
-			
+
+.or {
+
+width: 47px;
+height: 47px;
+position: absolute;
+background: url(../images/or.png) center left no-repeat;
+z-index: 1000;
+display: block;
+left: -24px;
+top: 35%;
+	
 
 }
 .booking-widget > .or {
@@ -54,6 +57,14 @@
 	top:24px;
 	left:0;
 	width: 100%;
+
+height: 47px;
+
+left: 0;
+top: 83%;
+
+
+
 				 }
 
 
@@ -70,9 +81,7 @@
 .container>.navbar-header {
 	width: 100%;
 
-	@media only screen and (min-width:993px)  { 
-		margin-left:-15px;
-		}
+
 	  @media only screen and (max-width:430px) {
 	margin-left: 0;
 	margin-right: 0;
@@ -85,6 +94,13 @@
 .col {
 	
 }
+
+html, body,
+.container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
 
 	@extend %body-copy;
@@ -94,30 +110,42 @@ body {
     .navbar-default {
 background-color: #fff;
 border: none;
-height: 122px;
+height: 92px;
 margin-bottom:0;
+
+@media only screen and (max-width:992px) { 
+height: 80px;
+}
+
+  @media only screen and (max-width:600px) { 
+height: 80px;
+}
+
 }
 
 .navbar-brand {
     background:url(../images/logo.gif) top left no-repeat;
     text-indent:-9999px;
     width:332px;
-    height:100px;
+    height:105px;
     display:block;
     margin:19px 0 0 0;
 
     @media only screen and (max-width:992px) {
 		background: url(../images/logo-mobile.gif) top center no-repeat;
 		width: 100%;
-		margin-top: 16px;
+		margin-top: 10px;
+		height:82px;
     }
 
     @media only screen and (max-width:370px) {
 		background-size:275px;
-		margin-top: 25px;
+		margin-top: 10px;
+		height:70px;
 	}
   
 }
+
 
 
 .header {
@@ -129,20 +157,43 @@ margin-bottom:0;
 
 	 	@media only screen and (max-width:992px) { 
 
-	 	height:632px;
+	 	height:420px;
 	 	
 	 	}
 
 	 		@media only screen and (max-width:600px) { 
 
-	 	height:448px;
+	 	height:320px;
 	 	
 	 	}
 }
 
+
 .phone-wrap {
 	display: table-cell;
 	vertical-align: middle;
+	display: block;
+	
+	a {
+		display: block;	
+		overflow: hidden;
+		
+	
+	}
+
+	span {
+		display: none
+
+	}
+
+
+}
+
+#googleMap {
+	@media only screen and (min-width:250px) and (max-width:992px) {
+	display: none
+	 }
+		
 }
 
 .sml-txt {
@@ -192,16 +243,15 @@ background: none;
 
 .col-md-7 {
 	margin-top: 90px;
-	padding-left: 0;
-	padding-right: 0;
+
 
 	@media only screen and (max-width:992px) { 
-		margin-top: 50px;
+		margin-top: 25px;
 		text-align: center;
 	}
 
 	@media only screen and (max-width:600px) { 
-		margin-top: 25px;
+		margin-top: 15px;
 	}
 	
 }
@@ -209,39 +259,64 @@ background: none;
 	position: relative;
 	height: 100%;
 
-	@media only screen and (max-width:992px) { 
+	
+	
+	@media only screen and (max-width:992px) {
 	position: absolute;
-    height: 632px; 
+    height: 420px; 
     overflow: visible;
     width: 100%;
     top: 0;
     background:url(../images/woman.png) bottom center no-repeat;
-    background-size:280px;
+    background-size:190px;
     padding:0;
 
 	}
 
 
 
+	@media only screen and (max-width:992px) and (min-width: 830px) { 
+	background-size:210px;
+	}
+
+	@media only screen and (max-width:860px)  { 
+	background-size:190px;
+	background:url(../images/woman-mobile.png) bottom center no-repeat;
+	}
+
 	
 @media only screen and (max-width:600px) { 
-    height: 448px; 
-    background-size:160px;
+    height: 320px; 
+    background-size:156px;
 	}
 
 @media only screen and (min-width:500px) and (max-width:599px) { 
-    background-size:180px;
+    background-size:156px;
+   
 	}
+
+
+@media only screen and (min-width:250px) and (max-width:456px) { 
+	background-size:136px;
+	background:url(../images/woman-mobile-sml.png) bottom center no-repeat;
+	}
+
+
 
 }
 	h1 {
 
 		@extend %primary-font;
 		color:$primary-color;
-		font-size:52px;
-		line-height:48px;
+		font-size:53px;
+		line-height:50px;
 		margin-top:0;
 		letter-spacing:-.04em;
+
+
+		@media only screen and (max-width:1200px) and (min-width:993px) {
+		max-width: 455px;
+		 }
 
 		@media only screen and (max-width:992px) { 
 
@@ -249,28 +324,28 @@ background: none;
 	
 			margin:0 auto;
 			line-height:1.0em;
-			margin-bottom:14px;
+			margin-bottom:9px;
 		}
 
-		@media only screen and (max-width:830px) { 
+		@media only screen and (max-width:860px) { 
 
 			width:430px;
 		}
 
 		@media only screen and (max-width:600px) { 
 
-			font-size: 39px;
+			font-size: 35px;
 			max-width:none;
 			width: 100%;
 			margin:0 auto;
 			line-height:1.0em;
-			margin-bottom:14px;
+			margin-bottom:9px;
 		}
 
 		@media only screen and (min-width:250px) and (max-width:430px) { 
 
 			font-size: 33px;
-			
+			line-height:.96em;
 		}
 
 	}
@@ -297,14 +372,21 @@ background: none;
 		}
 
 
-@media only screen and (max-width:830px)  and (min-width: 430px){  
+@media only screen and (max-width:860px)  and (min-width: 430px){  
 	max-width:430px
 		}
 
 		
-		@media only screen and (min-width:250px) and (max-width:600px) { 
+		@media only screen and (min-width:400px) and (max-width:600px) { 
 
 			font-size: 19px;line-height:1.1em;
+			
+		}
+
+		@media only screen and (min-width:250px) and (max-width:399px) { 
+		line-height:1.1em;
+
+			font-size: 17px;
 			
 		}
 	}
@@ -355,6 +437,9 @@ display: none;
 		padding-bottom:0;
 		background:none;
 		margin-bottom:5px;
+		@media only screen and (max-width:992px) {  
+		margin: 15px 0 0 0;
+		}
 
 		}
 
@@ -364,6 +449,12 @@ display: none;
 			margin: 0px auto;
 		
 		}
+
+		p {
+		@media only screen and (max-width:992px) {  
+		margin: 0 0 10px;
+		}
+	     }
 
 }
 
@@ -540,12 +631,13 @@ transition: all .3s;
 		img {
 			display:block;
 			margin-bottom:30px;
+
 			
 		}
 
 		@media only screen and (min-width:993px) {
 		> .container {
-			padding-left:45px;
+			padding-left:30px;
 		}
 		 }
 		
@@ -617,10 +709,16 @@ display:block;
  	}
  }
 	.booking-widget {
+		@media only screen and (max-width:992px) { 
+padding:0;
+		}
+
+
+
 position:relative;
-		background: $primary-color;
+		
 		width: 100%;
-		padding: 0;
+		padding: 0 15px;
 		overflow:hidden;
 
 		label {
@@ -729,8 +827,19 @@ position:relative;
 margin: 0 auto;
 			}
 img {
-	margin-right:14px;
-	margin-top:-7px;
+	margin-right:0;
+	
+	@media only screen and (min-width:410px) and (max-width:992px) {
+		padding:20px 0;
+		width:350px;
+	
+	}
+
+	@media only screen and (min-width:250px) and (max-width:409px) {
+		padding:20px 0;
+		width:270px;
+	
+	}
 }
 
 			+ p {
@@ -747,16 +856,19 @@ img {
 
 
 
-.jumbotron {
+.container.jumbotron {
 padding:0;
 overflow:hidden;
-background:#eee;
+background:none;
+background:none;
 margin-bottom:0;
 position: relative;
-top:-200px;
-margin-bottom:-160px;
-background:#eee;
+top:-220px;
+margin-bottom:-150px;
 
+padding-right: 0;
+padding-right: 0;
+border-radius:0;
 @media only screen and (min-width:250px) and (max-width:992px) { 
 
 top: 0;
@@ -772,6 +884,10 @@ width: 100%;
 .form-wrap {
 	width: 98%;
 	overflow: hidden;
+
+	@media only screen and (min-width:250px) and (max-width:992px) { 
+	width: 100%;
+	}
 }
 
 select:focus, option:focus, 
@@ -881,3 +997,9 @@ div.custom-select select option {
 // 	font-size: 16px;
 // 	color:#666;
 // }
+
+
+p {
+	font-size: 14px;
+	line-height: 1.3em;
+}
